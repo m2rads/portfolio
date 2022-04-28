@@ -1,0 +1,24 @@
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color:#ede7f6;
+    padding: 2em 0;
+}
+
+.footer-container:first-child > * {
+    margin-bottom: 2.5em;
+}
+
+.ps {
+    display: flex;
+    justify-content: space-between;
+    font-size: small;
+    align-items: center;
+    background-color: #5e35b1;
+}
+
+.ps:last-child {
+    padding-right: 10px;
+}
