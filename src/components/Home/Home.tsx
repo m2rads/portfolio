@@ -7,7 +7,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MediumIcon from '../../assets/medium-icon.png'
-import ProjectOverview from "../../containers/Project/ProjectOverview"
+import ProjectOverview from "../../containers/Project/Overview/ProjectOverview"
 import Pokey from '../../assets/developer-poky.json'
 import DisplayLottie from "../../containers/DisplayLottie"
 import Ps from '../../containers/ps/Ps'
@@ -44,7 +44,6 @@ function Home() {
                         </div>
                     </div>
                     <DisplayLottie lottie={Pokey} />
-                    {/* <img className="greeting-guy" src={Guy} alt="vector saying hi" width={550} height={350} /> */}
                 </div>
                 </Container>
             </header>

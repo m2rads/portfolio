@@ -1,7 +1,7 @@
-import Programmer from '../../assets/programmer.jpg'
+import Programmer from '../../../assets/programmer.jpg'
 import './ProjectOverview.css'
 
-function ProjectOverview () {
+function ProjectOverview (proDetails: any) {
     return (
         <div className="projects-item ">
             <a  className="project">

@@ -1,0 +1,42 @@
+import { useState, useEffect} from 'react'
+import Ps from '../../containers/ps/Ps'
+import ProjectDisplay from '../../containers/Project/Dispaly/ProjectDisplay'
+import Container from '@mui/material/Container';
+import '../Blog/Blog.css'
+
+function Projects() {
+    const projectURL = 'http://localhost:8080/api/projects'
+    const [projects, setProjects] = useState(
+        {
+            items: [],
+            isLoading: true,
+            error: null
+        });
+
+    useEffect(()=> {
+        fetch(projectURL)
+        .then(res => res.json())
+        .then(data => {
+            // console.log(data)
+            setProjects({items: data, isLoading: false, error: null}); 
+        })
+    }, [])
+    
+    return (
+        <div className="blogs">
+            <div className="hero">
+                <h1>Projects</h1>
+                <p>An in depth detail of some of the 
+                    projects that I have completed in the recent 
+                    years
+                </p>
+            </div>
+            <Container sx={{mt: '6em', mb:"6em"}}>
+                <ProjectDisplay proData={projects} />
+            </Container>
+            <Ps />
+        </div>
+    )
+}
+
+export default Projects

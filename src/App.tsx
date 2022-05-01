@@ -1,7 +1,7 @@
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 import Home from './components/Home/Home'
 import DisplayLottie from './containers/DisplayLottie'
-import Projects from './components/Projects'
+import Projects from './components/Projects/Projects'
 import Blog from './components/Blog/Blog'
 import About from './components/About/About'
 import PageNotFound from './components/PageNoteFound'
