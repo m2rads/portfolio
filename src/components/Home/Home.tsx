@@ -10,10 +10,28 @@ import MediumIcon from '../../assets/medium-icon.png'
 import ProjectOverview from "../../containers/Project/Overview/ProjectOverview"
 import Pokey from '../../assets/developer-poky.json'
 import DisplayLottie from "../../containers/DisplayLottie"
+import ProjectDisplay from '../../containers/Project/Dispaly/ProjectDisplay';
 import Ps from '../../containers/ps/Ps'
 import './Home.css'
 
 function Home() {
+
+    const projectURL = 'http://localhost:8080/api/featured'
+    const [featured, setFeatured] = useState(
+        {
+            items: [],
+            isLoading: true,
+            error: null
+        });
+
+    useEffect(()=> {
+        fetch(projectURL)
+        .then(res => res.json())
+        .then(data => {
+            // console.log(data)
+            setFeatured({items: data, isLoading: false, error: null}); 
+        })
+    }, [])
     
     return (
         <div className="home">
@@ -47,14 +65,12 @@ function Home() {
                 </div>
                 </Container>
             </header>
-            <Container className={` title  `}>
+            <div className={` title  `}>
                 <Typography>
                     <h2 id='featured'>Featured Projects</h2>
                 </Typography>
-                <ProjectOverview />
-                <ProjectOverview />
-                <ProjectOverview />
-            </Container>
+                <ProjectDisplay proData={featured} />
+            </div>
             <Ps />
         </div>
     )

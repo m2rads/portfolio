@@ -31,9 +31,9 @@ function Projects() {
                     years
                 </p>
             </div>
-            <Container sx={{mt: '6em', mb:"6em"}}>
+            <div>
                 <ProjectDisplay proData={projects} />
-            </Container>
+            </div>
             <Ps />
         </div>
     )

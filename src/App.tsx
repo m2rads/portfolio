@@ -8,7 +8,7 @@ import PageNotFound from './components/PageNoteFound'
 import Menu from './components/Menu/Menu'
 import Footer from './components/Footer/Footer'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { deepPurple, pink } from '@mui/material/colors';
+import { deepPurple, pink, yellow } from '@mui/material/colors';
 import './App.css'
 
 const theme = createTheme({
@@ -16,7 +16,7 @@ const theme = createTheme({
     primary: {
       main: deepPurple[600]
     },
-    secondary: pink
+    secondary: yellow
   },
   typography: {
     fontFamily: 'Lato',

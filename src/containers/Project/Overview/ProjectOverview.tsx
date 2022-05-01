@@ -1,25 +1,33 @@
 import Programmer from '../../../assets/programmer.jpg'
+import { Button } from '@mui/material';
 import './ProjectOverview.css'
 
 function ProjectOverview (proDetails: any) {
+    const text = proDetails.projects.desc
+    var description = text.replace(/<[^>]+>/g, '');
+    console.log(proDetails.projects.overview)
     return (
-        <div className="projects-item ">
-            <a  className="project">
-                <div className="icon">
-                    <img className="overview" src={Programmer} alt="website overview" height={250} />
+        <div className='project-wrapper'>
+            <a className='project-post'>
+                <div className="img-wrap">
+                    <img src={Programmer} />  
                 </div>
-                <div className="content">
-                    <div className="title">SDR Neural Network</div>
-                    <div className="rounded"></div>
-        
-                    <p>Developed in C++,an Artificial Neural network system from scratch that would recognize numbers from a seven-segment display</p>
-                    <p>Utilized activation functions and perceptron in building this model</p> 
+                <div className="content-wrap">
+                    <div className="title layout">
+                        <h1>{proDetails.projects.title}</h1>
+                    </div>
+                    <div className="tech-stack layout">
+                        <p>Tech Stack: {proDetails.projects.stack} </p>
+                    </div>
+                    <div className="desc layout">
+                        <p>{description.substring(0, 1000)}</p><span>...</span>
+                    </div>
+                    <div className="button layout">
+                        <Button sx={{mr: '2em'}}   onClick={()=> window.open(`${proDetails.projects.overview}`, '_blank')} variant="contained">Read More</Button>
+                        <Button color="secondary" onClick={()=> window.open(`${proDetails.projects.demo}`, '_blank')} variant="contained">See Demo</Button>
+                    </div>
                 </div>
-        
-                <div className="item-arrow">
-                    <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
-                </div>
-            </a>          
+            </a>
         </div>
     )
 }

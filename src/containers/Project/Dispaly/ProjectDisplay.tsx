@@ -6,7 +6,7 @@ function ProjectDisplay(projects: any) {
     const displayProjects = () => {
         if (projects.proData.items) {
             return projects.proData.items.map((index: any, item: any) => (
-                <ProjectOverview proDetails={index}  />
+                <ProjectOverview projects={index}  />
             ))
         }
     }
