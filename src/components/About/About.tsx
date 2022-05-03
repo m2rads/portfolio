@@ -24,7 +24,7 @@ function About() {
                             to express my passion in life. Building and designing 
                             simple programs was the beginning of becoming an individual.  </p>
                         <p>These days, my time is spent on coding, researching and experimenting
-                            with new tools. I also spend time writing blogs to find an answer 
+                            with new technologies. I also spend time writing blogs to find an answer 
                             to the questions that I once had. </p>
                         <p>Outside of the routine, you would find me dreaming about soccer,
                             playing snooker and looking for fine coffees.</p>

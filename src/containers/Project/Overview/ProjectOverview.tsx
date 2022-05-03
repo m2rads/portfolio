@@ -1,11 +1,12 @@
 import Programmer from '../../../assets/programmer.jpg'
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@mui/material';
 import './ProjectOverview.css'
 
 function ProjectOverview (proDetails: any) {
     const text = proDetails.projects.desc
     var description = text.replace(/<[^>]+>/g, '');
-    console.log(proDetails.projects.overview)
+    let navigate = useNavigate();
     return (
         <div className='project-wrapper'>
             <a className='project-post'>
@@ -23,7 +24,7 @@ function ProjectOverview (proDetails: any) {
                         <p>{description.substring(0, 1000)}</p><span>...</span>
                     </div>
                     <div className="button layout">
-                        <Button sx={{mr: '2em'}}   onClick={()=> window.open(`${proDetails.projects.overview}`, '_blank')} variant="contained">Read More</Button>
+                        <Button sx={{mr: '2em'}}   onClick={()=> navigate(`/projects/${proDetails.projects.project_id}`,  {replace: true})} variant="contained">Read More</Button>
                         <Button color="secondary" onClick={()=> window.open(`${proDetails.projects.demo}`, '_blank')} variant="contained">See Demo</Button>
                     </div>
                 </div>

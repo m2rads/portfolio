@@ -10,13 +10,16 @@ import Footer from './components/Footer/Footer'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { deepPurple, pink, yellow } from '@mui/material/colors';
 import './App.css'
+import ProjectDetailsDisplay from './containers/Project/Details/ProjectDetailsDisplay'
 
 const theme = createTheme({
   palette: {
     primary: {
       main: deepPurple[600]
     },
-    secondary: yellow
+    secondary: {
+      main: yellow[700]
+    }
   },
   typography: {
     fontFamily: 'Lato',
@@ -34,10 +37,11 @@ function App() {
           <Route path='/' element={<Home/>}> </Route>
           <Route path='/home' element={<Home/>}> </Route>
           <Route path='/projects' element={<Projects/>}> </Route>
+          <Route path='/projects/:id' element={<ProjectDetailsDisplay />}> </Route>
           <Route path='/blog' element={<Blog/>}> </Route>
           <Route path='/about' element={<About/>}> </Route>
           <Route path='/lottie' element={<DisplayLottie/>}> </Route>
-          {/* <Route path='*' element={<PageNotFound/>}> </Route> */} 
+          <Route path='*' element={<PageNotFound/>}> </Route> 
         </Routes>
         <Footer />
       </Router>
