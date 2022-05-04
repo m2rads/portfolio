@@ -22,3 +22,35 @@
 .ps:last-child {
     padding-right: 10px;
 }
+
+/* Media queries */
+@media (max-width: 744px) {
+    .footer-container {
+        display: block;
+        text-align: center;
+    }
+    .footer-icons {
+        display: flex;
+        align-items: baseline;
+        margin: 0 auto;
+        width: 40%;
+    }
+    .footer-nav {
+        display: flex;
+        align-items: baseline;
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    .footer-nav > * {
+        margin-right: 3em;
+    }
+
+    .footer-icons > * {
+        margin-right: 4em;
+    }
+
+    .form-control {
+        width: 25ch;
+    }
+}

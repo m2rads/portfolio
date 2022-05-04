@@ -22,3 +22,14 @@
     margin-top: 2em;
 }
 
+/* Media queries */
+@media (max-width: 744px) {
+    
+    .books {
+        display: block;
+    }
+
+    .books > * {
+        margin-bottom: 2em;
+    }
+}

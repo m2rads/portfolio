@@ -61,7 +61,9 @@ function Home() {
                             </IconButton>
                         </div>
                     </div>
-                    <DisplayLottie lottie={Pokey} />
+                    <div className="lottie">
+                        <DisplayLottie lottie={Pokey} />
+                    </div>
                 </div>
                 </Container>
             </header>

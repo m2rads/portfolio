@@ -118,4 +118,16 @@ h3 + p {
     }
   }
 
-  /* End wave emoji */
+/* End wave emoji */
+
+
+/* Media queries */
+@media (max-width: 744px) {
+  .lottie {
+      display: none !important;
+  }
+  .header-grid {
+    display: block
+  }
+  
+  }

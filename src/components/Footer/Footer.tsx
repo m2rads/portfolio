@@ -20,7 +20,7 @@ export default function Footer () {
     return (
         <footer id='footer'>
                 <div className='footer-container'>
-                    <div>
+                    <div className='footer-nav'>
                         <Button sx={{mb: '2.80em'}} color='inherit' onClick={()=>navigate("/")}>Home</Button>
                         <br />
                         <Button sx={{mb: '2.80em'}} color='inherit' onClick={()=>navigate("/projects")}>Projects</Button>
@@ -73,7 +73,7 @@ export default function Footer () {
                                 }}
                             />
                             <br/>
-                            <FormControl fullWidth sx={{ m: 1, width: '52ch' }}>
+                            <FormControl fullWidth className='form-control' sx={{ m: 1, width: '52ch' }}>
                                 <InputLabel htmlFor="outlined-adornment-amount">Email</InputLabel>
                                 <OutlinedInput
                                     id="outlined-adornment-amount"

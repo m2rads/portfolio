@@ -78,3 +78,16 @@
 }
 
 
+/* Media queries */
+@media (max-width: 744px) {
+    
+    .project-wrapper .project-post {
+        display: block;
+    }
+
+    .project-post .img-wrap {
+       margin: 0 auto;
+       margin-top: 2em;
+       width: 50%;
+    }
+}

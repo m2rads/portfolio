@@ -66,3 +66,17 @@
 .button {
     margin-top: 2em;
 }
+
+/* Media queries */
+@media (max-width: 744px) {
+    
+    .blog-wrapper .blog-post {
+        display: block;
+    }
+
+    .blog-post .img-wrap {
+       margin: 0 auto;
+       margin-top: 2em;
+       width: 50%;
+    }
+}
