@@ -1,8 +1,11 @@
+import DisplayLottie from "../containers/DisplayLottie"
+import pokeyNotFound from "../assets/pokeyNotFound.json"
+
 function PageNotFound() {
 
     return (
-        <div className="noteFound">
-            <p>404 not found</p>
+        <div style={{margin: "0 auto", width: '70%', marginTop: '1em'}} className="noteFound">
+            <DisplayLottie lottie={pokeyNotFound} />
         </div>
     )
 }
