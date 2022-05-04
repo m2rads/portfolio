@@ -1,9 +1,12 @@
+.footer-background {
+    background-color:#ede7f6;
+}
 
 .footer-container {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color:#ede7f6;
+    
     padding: 2em 0;
 }
 
@@ -27,19 +30,21 @@
 @media (max-width: 744px) {
     .footer-container {
         display: block;
-        text-align: center;
+        /* text-align: center; */
+        margin: 0 auto;
+        width: 50%;
     }
     .footer-icons {
         display: flex;
         align-items: baseline;
         margin: 0 auto;
-        width: 40%;
+        /* width: 40%; */
     }
     .footer-nav {
         display: flex;
         align-items: baseline;
         margin: 0 auto;
-        width: 50%;
+        /* width: 50%; */
     }
 
     .footer-nav > * {

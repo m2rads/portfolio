@@ -12,6 +12,7 @@ import { deepPurple, pink, yellow } from '@mui/material/colors';
 import './App.css'
 import ProjectDetailsDisplay from './containers/Project/Details/ProjectDetailsDisplay'
 
+
 const theme = createTheme({
   palette: {
     primary: {

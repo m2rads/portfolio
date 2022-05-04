@@ -1,12 +1,24 @@
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+// import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import Brightness4Icon from '@mui/icons-material/Brightness4';
+// import IconButton from '@mui/material/IconButton';
+// import Brightness4Icon from '@mui/icons-material/Brightness4';
+import {styled } from '@mui/material/styles';
 import {useNavigate} from 'react-router-dom';
 import Box from '@mui/material/Box';
 import './Menu.css'
+
+const ResponsiveMenu = styled('div')(({ theme }) => ({
+    padding: theme.spacing(1),
+    [theme.breakpoints.up('sm')]: {
+        width: '52ch'
+    },
+    [theme.breakpoints.down('sm')]: {
+        width: '25ch',
+        margin: 'auto',
+    },
+  }));
 
 function Menu() {
     let navigate = useNavigate();

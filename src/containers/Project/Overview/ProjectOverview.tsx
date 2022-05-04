@@ -24,8 +24,8 @@ function ProjectOverview (proDetails: any) {
                         <p>{description.substring(0, 1000)}</p><span>...</span>
                     </div>
                     <div className="button layout">
-                        <Button sx={{mr: '2em'}}   onClick={()=> navigate(`/projects/${proDetails.projects.project_id}`,  {replace: true})} variant="contained">Read More</Button>
-                        <Button color="secondary" onClick={()=> window.open(`${proDetails.projects.demo}`, '_blank')} variant="contained">See Demo</Button>
+                        <Button sx={{mr: '2em', mt: '1em'}}   onClick={()=> navigate(`/projects/${proDetails.projects.project_id}`,  {replace: true})} variant="contained">Read More</Button>
+                        <Button sx={{mr: '2em', mt: '1em'}} color="secondary" onClick={()=> window.open(`${proDetails.projects.demo}`, '_blank')} variant="contained">See Demo</Button>
                     </div>
                 </div>
             </a>

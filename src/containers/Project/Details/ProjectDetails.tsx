@@ -13,8 +13,8 @@ export default function ProjectDetails(prop: any) {
                     <p>Tech Stack: {prop.data.stack}</p>
                 </div>
                 <div className="links">
-                    <Button sx={{mr: '4em'}} onClick={()=> window.open(`${prop.data.demo}`, '_blank')} color='secondary' variant="contained">See demo</Button>
-                    <Button onClick={()=> window.open(`${prop.data.github}`, '_blank')} color="primary" variant="contained" >Github Repo <GitHub sx={{ml: '0.5em'}} /></Button>
+                    <Button sx={{mr: '4em', mt:"2em"}} onClick={()=> window.open(`${prop.data.demo}`, '_blank')} color='secondary' variant="contained">See demo</Button>
+                    <Button sx={{mt: '2em'}} onClick={()=> window.open(`${prop.data.github}`, '_blank')} color="primary" variant="contained" >Github Repo <GitHub sx={{ml: '0.5em'}} /></Button>
                 </div>
             </div>
             <div className="details-content">
