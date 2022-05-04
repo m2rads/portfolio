@@ -5,7 +5,7 @@ import Projects from './components/Projects/Projects'
 import Blog from './components/Blog/Blog'
 import About from './components/About/About'
 import PageNotFound from './components/PageNoteFound'
-import Menu from './components/Menu/Menu'
+import AppMenu from './components/Menu/AppMenu'
 import Footer from './components/Footer/Footer'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { deepPurple, pink, yellow } from '@mui/material/colors';
@@ -33,7 +33,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Router>
-       <Menu />
+       <AppMenu />
         <Routes>
           <Route path='/' element={<Home/>}> </Route>
           <Route path='/home' element={<Home/>}> </Route>
