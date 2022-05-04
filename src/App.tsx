@@ -20,7 +20,7 @@ const theme = createTheme({
     },
     secondary: {
       main: yellow[700]
-    }
+    },
   },
   typography: {
     fontFamily: 'Lato',
